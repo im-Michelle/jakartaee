@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users Form</title>
+</head>
+<body>
+  <h3>Users Form</h3>
+  <form action="/webapp-form/register" method="post">
+    <div>
+      <label for="username">User</label>
+      <div><input type="text" name="username" id="username"></div>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <div><input type="password" name="password" id="password"></div>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <div><input type="text" name="email" id="email"></div>
+    </div>
+    <div>
+      <label for="country">Country</label>
+      <div>
+        <select name="country" id="country">
+            <option value="">-- Select your country --</option>
+            <option value="AR">Argentina</option>
+            <option value="BR">Brazil</option>
+            <option value="CL">Chile</option>
+            <option value="CO">Colombia</option>
+            <option value="EC">Ecuador</option>
+            <option value="PY">Paraguay</option>
+            <option value="PE">Peru</option>
+            <option value="UY">Uruguay</option>
+            <option value="VE">Venezuela</option>
+            <option value="MX" selected>Mexico</option>
+        </select>
+      </div>
+    </div>
+    
+    <div>
+      <label for="programmingLanguages">Programming Languages</label>
+      <div>
+        <select name="programmingLanguages" id="programmingLanguages" multiple>
+          <option value="java" selected>Java SE</option>
+          <option value="jakartaee" selected>Jakarta EE</option>
+          <option value="spring">Spring Boot</option>
+          <option value="nodejs">Node JS</option>
+          <option value="python">Python</option>
+          <option value="ruby">Ruby</option>
+        </select>
+      </div>
+    </div>
+
+    <div>
+      <label>Roles</label>
+      <div>
+        <input type="checkbox" name="roles" value="ROLE_ADMIN">
+        <label>Admin</label>
+      </div>
+      <div>
+        <input type="checkbox" name="roles" value="ROLE_USER" checked>
+        <label>User</label>
+      </div>
+      <div>
+        <input type="checkbox" name="roles" value="ROLE_MODERATOR">
+        <label>Moderator</label>
+      </div>
+    </div>
+
+    <div>
+      <label>Languages</label>
+      <div>
+        <input type="radio" name="language" value="es">
+        <label>Spanish</label>
+      </div>
+      <div>
+        <input type="radio" name="language" value="en">
+        <label>English</label>
+      </div>
+      <div>
+        <input type="radio" name="language" value="fr">
+        <label>French</label>
+      </div>
+    </div>
+    
+    <div>
+      <label for="enable">Enable</label>
+      <div>
+        <input type="checkbox" name="enable" id="enable" checked>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <input type="submit" value="Register">
+      </div>
+    </div>
+
+    <input type="hidden" name="secret" value="1234">
+
+  </form>
+</body>
+</html>
